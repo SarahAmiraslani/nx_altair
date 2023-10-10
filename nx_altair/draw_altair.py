@@ -83,7 +83,7 @@ def draw_networkx_edges(
     if isinstance(width, str):
         encoded_attrs["size"] = alt.Size(width, legend=None)
 
-    elif isinstance(width, float) or isinstance(width, int):
+    elif isinstance(width, (float, int)):
         marker_attrs["strokeWidth"] = width
 
     else:
@@ -103,7 +103,7 @@ def draw_networkx_edges(
     if isinstance(alpha, str):
         encoded_attrs["opacity"] = alpha
 
-    elif isinstance(alpha, int) or isinstance(alpha, float):
+    elif isinstance(alpha, (int, float)):
         marker_attrs["opacity"] = alpha
 
     elif alpha is not None:
@@ -220,7 +220,7 @@ def draw_networkx_arrows(
     if isinstance(arrow_width, str):
         encoded_attrs["size"] = alt.Size(arrow_width, legend=None)
 
-    elif isinstance(arrow_width, float) or isinstance(arrow_width, int):
+    elif isinstance(arrow_width, (float, int)):
         marker_attrs["strokeWidth"] = arrow_width
 
     else:
@@ -240,7 +240,7 @@ def draw_networkx_arrows(
     if isinstance(alpha, str):
         encoded_attrs["opacity"] = alpha
 
-    elif isinstance(alpha, int) or isinstance(alpha, float):
+    elif isinstance(alpha, (int, float)):
         marker_attrs["opacity"] = alpha
 
     elif alpha is not None:
@@ -389,7 +389,7 @@ def draw_networkx_nodes(
     if isinstance(alpha, str):
         encoded_attrs["opacity"] = alpha
 
-    elif isinstance(alpha, int) or isinstance(alpha, float):
+    elif isinstance(alpha, (int, float)):
         marker_attrs["opacity"] = alpha
 
     elif alpha is not None:
