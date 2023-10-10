@@ -5,15 +5,7 @@ def is_arraylike(obj):
     """Return True if array-like (accepts lists, pandas.Series
     pandas.DataFrame, numpy.ndarray).
     """
-    if isinstance(obj, list):
-        return True
-    elif isinstance(obj, np.ndarray):
-        return True
-    elif isinstance(obj, pd.Series):
-        return True
-    elif isinstance(obj, pd.DataFrame):
-        return True
-    return False
+    return isinstance(obj, (list, np.ndarray, pd.Series, pd.DataFrame))
 
 
 def despine(chart):
